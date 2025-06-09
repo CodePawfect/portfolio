@@ -8,7 +8,7 @@ A modern, responsive portfolio website showcasing my skills, projects, and exper
 
 ## Features
 
-- **Interactive 3D Particle Background** - Immersive visual experience with 2000+ animated particles
+- **Animated 3D Particle Background** - Immersive visual experience with 2000+ animated particles
 - **Responsive Design** - Seamlessly adapts to all device sizes and orientations
 - **Modern UI/UX** - Clean, professional interface with smooth animations and transitions
 - **Project Showcase** - Highlighting key projects with technologies used
