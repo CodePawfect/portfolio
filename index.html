@@ -232,14 +232,37 @@
     <script src="https://cdn.jsdelivr.net/npm/three@0.160.1/build/three.min.js"></script>
     <script src="particles.js"></script>
     <script>
-        // Mobile navigation toggle
-        const burger = document.querySelector('.burger');
-        const navLinks = document.querySelector('.nav-links');
+    // Mobile navigation toggle
+    const burger = document.querySelector('.burger');
+    const navLinks = document.querySelector('.nav-links');
+    const navLinksItems = document.querySelectorAll('.nav-links li');
 
-        burger.addEventListener('click', () => {
-            navLinks.classList.toggle('nav-active');
-            burger.classList.toggle('toggle');
+    burger.addEventListener('click', () => {
+        // Toggle Nav
+        navLinks.classList.toggle('nav-active');
+        
+        // Animate Links
+        navLinksItems.forEach((link, index) => {
+            if (link.style.animation) {
+                link.style.animation = '';
+            } else {
+                link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.3}s`;
+            }
         });
-    </script>
-</body>
+        
+        // Burger Animation
+        burger.classList.toggle('toggle');
+    });
+
+    // Close menu when clicking on a link
+    navLinksItems.forEach(link => {
+        link.addEventListener('click', () => {
+            navLinks.classList.remove('nav-active');
+            burger.classList.remove('toggle');
+            navLinksItems.forEach(link => {
+                link.style.animation = '';
+            });
+        });
+    });
+</script></body>
 </html>
