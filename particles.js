@@ -1,3 +1,5 @@
+import * as THREE from 'https://cdnjs.cloudflare.com/ajax/libs/three.js/0.174.0/three.module.js'
+
 /**
  * 3D Particle Animation System
  * Creates a floating particle field with smooth movement and wave-like animations
@@ -288,3 +290,5 @@ class ParticleSystem {
 
 // Initialize the particle system when the script loads
 const particleSystem = new ParticleSystem();
+
+export default ParticleSystem;
